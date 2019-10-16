@@ -1,0 +1,44 @@
+<div
+  fxLayout="row wrap"
+  fxLayoutAlign="center center"
+  class="viewport"
+  fxLayoutGap="4px"
+>
+  <div
+    class="item"
+    appEscurecerAoPassarMouse
+    [opacidade]="0.7"
+    backgroundColor="#1E5B6F"
+    *ngFor="let foto of fotos"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+  >
+    <div
+      class="descricao"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="8px"
+    >
+      <span>{{ foto }}</span>
+      <mat-icon class="btn-compartilhar" aria-hidden="false" aria-label="Palestras">
+        share
+      </mat-icon>
+    </div>
+    <img [src]="retornarCaminhoFoto(foto)" alt="fotos" />
+  </div>
+
+  <button
+    (click)="carregarMaisFotos()"
+    class="btn-carregar-mais"
+    mat-button
+    color="primary"
+    fxLayout="row"
+    fxLayoutAlign="center center"
+    fxLayoutGap="8px"
+  >
+    <label> Carregar mais </label>
+    <mat-icon aria-hidden="false" aria-label="Palestras">
+      add_photo_alternate
+    </mat-icon>
+  </button>
+</div>

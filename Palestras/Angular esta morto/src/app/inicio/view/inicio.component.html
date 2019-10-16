@@ -1,0 +1,45 @@
+<div class="content">
+
+  <!-- mensagem -->
+  <div class="card highlight-card card-small ">
+    {{ mensagemExibicao }}
+  </div>
+
+  <h2>Conecte-se, reinvente-se</h2>
+
+  <!-- cards -->
+  <div class="card-container">
+    <app-card rota="teste" icone="school"></app-card>
+  </div>
+
+  <h2>Veja as fotos da segunda edição:</h2>
+
+  <!-- fotos -->
+  <div class="card-container">
+    <app-fotos
+      (clickCarregarMaisFotos)="carregarMaisFotos($event)"
+      [fotos]="fotos"
+    ></app-fotos>
+  </div>
+
+  <!-- Social -->
+  <div class="card-container fim-pagina" fxLayout="column">
+    <app-btn-social
+      nomeRede="facebook"
+      diretorioImagem="../../../assets/images/icones/facebook.png"
+      url="https://www.facebook.com/connectionDay/?ref=br_rs"
+    ></app-btn-social>
+
+    <app-btn-social
+      nomeRede="instagram"
+      diretorioImagem="../../../assets/images/icones/instagran.png"
+      url="https://www.instagram.com/connectionday/"
+    ></app-btn-social>
+
+    <app-btn-social
+      nomeRede="linkedin"
+      diretorioImagem="../../../assets/images/icones/linkedin.png"
+      url="https://www.linkedin.com/in/conectados-comunidade/"
+    ></app-btn-social>
+  </div>
+</div>

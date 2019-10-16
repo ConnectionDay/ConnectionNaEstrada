@@ -1,0 +1,39 @@
+.viewport {
+  width: 80vw;
+
+  .item {
+    position: relative;
+    margin: 4px;
+
+    img {
+      opacity: 1;
+    }
+
+    .descricao {
+      opacity: 0;
+      position: absolute;
+      color: white;
+    }
+  }
+
+  .btn-carregar-mais {
+    margin-top: 16px;
+    height: 40px;
+  }
+
+  .btn-compartilhar{
+    cursor: pointer;
+  }
+
+  .item:hover {
+
+    .descricao {
+      opacity: 1;
+      z-index: 3;
+    }
+
+    img {
+      opacity: 0.4;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.toolbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  height: 60px;
+  margin: -8px;
+  display: flex;
+  align-items: center;
+  background-color: #252524;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo {
+  height: 40px;
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo:hover {
+  opacity: 0.8;
+}
+
+.link {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  li {
+    display: inline;
+    margin: 0px 16px;
+  }
+
+  li:hover {
+    color: #fac42b;
+    cursor: pointer;
+    border-bottom: 2px solid #fac42b; /* or whatever colour you'd prefer */
+  }
+}
