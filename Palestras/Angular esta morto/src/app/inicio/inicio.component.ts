@@ -8,13 +8,12 @@ import { FotoService } from './services/fotos.service';
 export class InicioComponent implements OnInit {
 
   mensagemExibicao = 'Bem vindos ao ConnectionDay';
-  fotos = [];
+  fotos: string[];
 
   constructor(private servicoFoto: FotoService) { }
 
   ngOnInit(): void {
     this.fotos = this.servicoFoto.listarFotos();
-    this.fotos = this.fotos;
   }
 
   carregarMaisFotos(event): void {

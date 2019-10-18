@@ -7,8 +7,8 @@
   <div
     class="item"
     appEscurecerAoPassarMouse
-    [opacidade]="0.7"
-    backgroundColor="#1E5B6F"
+    [opacidade]="opacidade"
+    [backgroundColor]="backgroundColor"
     *ngFor="let foto of fotos"
     fxLayout="column"
     fxLayoutAlign="center center"
@@ -20,7 +20,11 @@
       fxLayoutGap="8px"
     >
       <span>{{ foto }}</span>
-      <mat-icon class="btn-compartilhar" aria-hidden="false" aria-label="Palestras">
+      <mat-icon
+        class="btn-compartilhar"
+        aria-hidden="false"
+        aria-label="Palestras"
+      >
         share
       </mat-icon>
     </div>

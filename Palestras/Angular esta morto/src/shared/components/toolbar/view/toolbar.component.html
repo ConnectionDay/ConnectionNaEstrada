@@ -4,11 +4,12 @@
     alt="logo"
     class="link"
     src="../../../../assets/images/logo.jpg"
-    (click)="irParaInicio()"
+    (click)="navegarPara('inicio')"
   />
 
   <ul>
-    <li>Início</li>
-    <li>Palestras</li>
+    <li *ngFor="let link of linkMenus" (click)="navegarPara(link.rota)">
+      {{ link.descricao }}
+    </li>
   </ul>
 </div>

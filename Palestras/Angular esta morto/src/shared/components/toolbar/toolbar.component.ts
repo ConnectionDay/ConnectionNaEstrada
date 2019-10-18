@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Router } from '@angular/router';
+import { LinkMenu } from './models/link-menu';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,11 +9,22 @@ import { Router } from '@angular/router';
 })
 export class ToolbarComponent {
 
+  public linkMenus = [
+    {
+      descricao: 'Início',
+      rota: 'inicio'
+    },
+    {
+      descricao: 'Palestras',
+      rota: 'palestras'
+    }
+  ] as LinkMenu[];
+
   constructor(private router: Router) {
   }
 
-  irParaInicio() {
-    this.router.navigate(['inicio']);
+  navegarPara(rota: string) {
+    this.router.navigate([rota]);
   }
 
 }

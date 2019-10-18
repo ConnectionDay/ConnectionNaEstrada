@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-fotos',
@@ -6,9 +6,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./view/fotos.component.scss']
 })
 export class FotoComponent {
-  @Input() fotos: [];
+
+  @Input() fotos: string[] = [];
   @Output() clickCarregarMaisFotos = new EventEmitter();
 
+  public backgroundColor = '#1E5B6F';
+  public opacidade = 0.7;
 
   public retornarCaminhoFoto(nomeFoto: string) {
     return `../../../assets/images/evento/${nomeFoto}`;

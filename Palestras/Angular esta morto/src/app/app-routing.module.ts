@@ -3,9 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
-  { path: '', loadChildren: './inicio/inicio.module#InicioModule' },
+  { path: 'inicio', loadChildren: './inicio/inicio.module#InicioModule' },
+  { path: 'palestras', loadChildren: './palestras/palestra.module#PalestraModule'},
+  { path: '**', redirectTo: 'inicio' }
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

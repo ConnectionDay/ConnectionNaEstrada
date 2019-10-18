@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ToolbarModule } from 'src/shared/layout/toolbar/toolbar.module';
+import { ToolbarModule } from 'src/shared/components/toolbar/toolbar.module';
 
 @NgModule({
   declarations: [AppComponent],

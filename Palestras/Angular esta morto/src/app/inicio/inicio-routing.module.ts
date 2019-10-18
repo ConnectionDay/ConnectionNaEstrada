@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { InicioComponent } from './inicio.component';
 
 const routes: Routes = [
-  { path: 'inicio', component: InicioComponent }
+  { path: '', component: InicioComponent }
 ];
 
 @NgModule({
