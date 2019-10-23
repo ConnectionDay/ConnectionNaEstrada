@@ -9,7 +9,7 @@ import { ToolbarModule } from 'src/shared/components/toolbar/toolbar.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     ToolbarModule
